@@ -6,11 +6,13 @@ import Footer from '../Footer/Footer'
 
 function App() {
   return (
-    <div className=''>App
+    <div className='h-screen w-screen'>
+    <div className='px-8 md:px-10'>
     <Header/>
     <Hero/>
     <About/>
     <Footer/>
+    </div>
     </div>
   )
 }
