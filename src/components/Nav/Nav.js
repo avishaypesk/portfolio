@@ -38,7 +38,7 @@ function Nav() {
             </div>
             {isOpen && (
                 <div
-                    className="md:hidden absolute right-8 top-20 bg-grayishdarkblue w-56 h-48 "
+                    className="md:hidden absolute right-8 top-20 bg-grayishdarkblue w-56 h-48  z-10"
                 >
                     <ul className="flex flex-col py-10 h-full justify-between">
                         <NavItem href="#home" text="Home" />

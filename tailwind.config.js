@@ -7,7 +7,9 @@ module.exports = {
     extend: {
       colors: {
         cyan: '#5FB4A2',
+        darkcyan: '#57A392',
         darkblue: '#203A4C',
+        darkerblue: '#1d3544',
         grayishdarkblue: '#33323D',
         verylightgrey: '#FAFAFA',
         lightgrey: '#EAEAEB',
@@ -31,9 +33,9 @@ module.exports = {
         '30px': '30px',
       },
       letterSpacing: {
-        '-0.45': '-0.45em',
-        '-0.36': '-0.36em',
-        '-0.29': '-0.29em',
+        tight: '-0.45px',
+        tighter: '-0.36px',
+        tightest: '-0.30px',
       },
     },
   },
