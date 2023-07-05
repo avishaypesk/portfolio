@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Ibarra Real Nova';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./static/IbarraRealNova-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Ibarra Real Nova';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./static/IbarraRealNova-Bold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./static/PublicSans-Regular.ttf') format('truetype');
+  }
