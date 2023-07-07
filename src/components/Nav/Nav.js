@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 import hamburger from '../../assets/images/icons/hamburger.svg';
 import close from '../../assets/images/icons/close.svg';
-
-function NavItem({ href, text }) {
-    return (
-        <li>
-            <a href={href} className="hover:text-cyan">{text}</a>
-        </li>
-    );
-}
+import NavItem from '../NavItem/NavItem';
 
 function Nav() {
     const [isOpen, setIsOpen] = useState(false);
