@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import hamburger from '../../assets/images/icons/hamburger.svg';
 import close from '../../assets/images/icons/close.svg';
 import NavItem from '../NavItem/NavItem';
 
 function Nav() {
+
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location]);
+
+
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -24,9 +33,9 @@ function Nav() {
             </button>
             <div className="hidden md:flex text-grayishdarkblue">
                 <ul className="flex space-x-8 items-center">
-                    <NavItem href="#home" text="Home" />
-                    <NavItem href="#portfolio" text="Portfolio" />
-                    <NavItem href="#contact" text="Contact Me" />
+                    <NavItem to="/" text="Home" />
+                    <NavItem to="/projects" text="Portfolio" />
+                    <NavItem to="/contact" text="Contact Me" />
                 </ul>
             </div>
             {isOpen && (
@@ -34,9 +43,9 @@ function Nav() {
                     className="md:hidden absolute right-8 top-20 bg-grayishdarkblue w-56 h-48  z-10"
                 >
                     <ul className="flex flex-col py-10 h-full justify-between">
-                        <NavItem href="#home" text="Home" />
-                        <NavItem href="#portfolio" text="Portfolio" />
-                        <NavItem href="#contact" text="Contact Me" />
+                        <NavItem to="/" text="Home" />
+                        <NavItem to="/projects" text="Portfolio" />
+                        <NavItem to="/contact" text="Contact Me" />
                     </ul>
                 </div>
             )}

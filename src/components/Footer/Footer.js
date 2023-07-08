@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import whiteLogo from '../../assets/images/logo-white.svg';
 import NavItem from '../NavItem/NavItem';
 import Button from '../Button/Button';
@@ -25,9 +25,9 @@ function Footer() {
         <div className='py-14 flex flex-col items-center'>
           <img src={whiteLogo} alt='logo' />
           <ul className='font-public-sans text-xs text-white uppercase text-center tracking-[2px] space-y-8 my-10'>
-            <NavItem href="#home" text="Home" />
-            <NavItem href="#portfolio" text="Portfolio" />
-            <NavItem href="#contact" text="Contact Me" />
+            <NavItem to="/" text="Home" />
+            <NavItem to="/projects" text="Portfolio" />
+            <NavItem to="/contact" text="Contact Me" />
           </ul>
           <ul className='flex space-x-4'>
             {socialMedia.map((item) => (

@@ -1,9 +1,17 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 
-function NavItem({ href, text }) {
+function NavItem({ to, text }) {
     return (
         <li>
-            <a href={href} className="hover:text-cyan">{text}</a>
+            <NavLink
+                to={to}
+                className="hover:text-cyan"
+                activeClassName="text-cyan"
+                exact
+            >
+                {text}
+            </NavLink>
         </li>
     );
 }
