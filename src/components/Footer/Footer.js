@@ -17,7 +17,7 @@ function Footer() {
     <footer className='mt-[115px] '>
       <div className='flex flex-col items-center mb-20 px-8'>
         <h2 className='font-ibarra-real-nova font-bold text-grayishdarkblue text-h2 tracking-tighter leading-42px mb-10 text-center'>Interested in doing a project together?</h2>
-        <button className='uppercase border-[1px] border-grayishdarkblue px-8 py-4 font-public-sans tracking-[2px] text-xs leading-none hover:text-white hover:bg-grayishdarkblue max-w-[162px]'>Contact me</button>
+        <button className='uppercase border-[1px] border-grayishdarkblue px-8 py-4 font-public-sans tracking-[2px] text-xs leading-none hover:text-white hover:bg-grayishdarkblue'>Contact me</button>
       </div>
 
       <div className="bg-grayishdarkblue">
