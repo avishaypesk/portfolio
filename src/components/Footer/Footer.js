@@ -1,6 +1,7 @@
 import React from 'react'
 import whiteLogo from '../../assets/images/logo-white.svg';
 import NavItem from '../NavItem/NavItem';
+import Button from '../Button/Button';
 import github from '../../assets/images/icons/github.svg';
 import twitter from '../../assets/images/icons/twitter.svg';
 import linkedin from '../../assets/images/icons/linkedin.svg';
@@ -17,7 +18,7 @@ function Footer() {
     <footer className='mt-[115px] '>
       <div className='flex flex-col items-center mb-20 px-8'>
         <h2 className='font-ibarra-real-nova font-bold text-grayishdarkblue text-h2 tracking-tighter leading-42px mb-10 text-center'>Interested in doing a project together?</h2>
-        <button className='uppercase border-[1px] border-grayishdarkblue px-8 py-4 font-public-sans tracking-[2px] text-xs leading-none hover:text-white hover:bg-grayishdarkblue'>Contact me</button>
+        <Button text='Contact me' />
       </div>
 
       <div className="bg-grayishdarkblue">
@@ -32,7 +33,7 @@ function Footer() {
             {socialMedia.map((item) => (
               <li key={item.name}>
                 <a href={item.url}>
-                  <img src={item.icon} target="_blank" alt={item.name} className='white-svg'/>
+                  <img src={item.icon} target="_blank" alt={item.name} className='white-svg' />
                 </a>
               </li>
             ))}
