@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import whiteLogo from '../../assets/images/logo-white.svg';
 import NavItem from '../NavItem/NavItem';
 import Button from '../Button/Button';
@@ -6,12 +7,17 @@ import './Footer.css';
 import socialMedia from '../../data/socialMedia';
 
 function Footer() {
+  const location = useLocation();
+  const isContactPage = location.pathname === '/contact';
+
   return (
-    <footer className='mt-[115px] '>
-      <div className='flex flex-col items-center mb-20 px-8'>
-        <h2 className='font-ibarra-real-nova font-bold text-grayishdarkblue text-h2 tracking-tighter leading-42px mb-10 text-center'>Interested in doing a project together?</h2>
-        <Button text='Contact me' />
-      </div>
+    <footer className='mt-20 '>
+      {!isContactPage && (
+        <div className='flex flex-col items-center mb-20 px-8'>
+          <h2 className='font-ibarra-real-nova font-bold text-grayishdarkblue text-h2 tracking-tighter leading-42px mb-10 text-center'>Interested in doing a project together?</h2>
+          <Button text='Contact me' />
+        </div>
+      )}
 
       <div className="bg-grayishdarkblue">
         <div className='py-14 flex flex-col items-center'>
