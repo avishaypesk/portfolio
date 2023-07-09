@@ -2,16 +2,8 @@ import React from 'react';
 import whiteLogo from '../../assets/images/logo-white.svg';
 import NavItem from '../NavItem/NavItem';
 import Button from '../Button/Button';
-import github from '../../assets/images/icons/github.svg';
-import twitter from '../../assets/images/icons/twitter.svg';
-import linkedin from '../../assets/images/icons/linkedin.svg';
 import './Footer.css';
-
-const socialMedia = [
-  { name: 'GitHub', url: 'https://github.com', icon: github },
-  { name: 'Twitter', url: 'https://twitter.com', icon: twitter },
-  { name: 'LinkedIn', url: 'https://linkedin.com', icon: linkedin },
-];
+import socialMedia from '../../data/socialMedia';
 
 function Footer() {
   return (
@@ -33,7 +25,7 @@ function Footer() {
             {socialMedia.map((item) => (
               <li key={item.name}>
                 <a href={item.url}>
-                  <img src={item.icon} target="_blank" alt={item.name} className='white-svg' />
+                  <img src={item.icon} target="_blank" alt={item.name} className='white-svg w-6 h-6' />
                 </a>
               </li>
             ))}
