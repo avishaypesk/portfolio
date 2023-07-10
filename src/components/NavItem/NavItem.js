@@ -7,7 +7,6 @@ function NavItem({ to, text }) {
             <NavLink
                 to={to}
                 className="hover:text-cyan"
-                activeClassName="text-cyan"
                 exact
             >
                 {text}
