@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import validator from 'validator';
 import socialMedia from '../../data/socialMedia';
 import './Contact.css'
-import Button from '../Button/Button';
 
-const InputField = ({ label, type, value, onChange, placeholder, className }) => {
-  const inputClasses = 'w-full input-bg border py-[9px] px-4 text-[13px] text-darkgrayishblue leading-30px font-public-sans placeholder-gray-400 focus:outline-none focus:border-cyan ' + className;
+const InputField = ({ label, type, value, onChange, placeholder, className, error }) => {
+  const inputClasses = `w-full input-bg border py-[9px] px-4 text-[13px] leading-30px font-public-sans placeholder-gray-400 focus:outline-none focus:border-cyan ${error ? 'border-red-500' : 'border-inherit'
+    } ${className}`;
 
   return (
     <div className='mb-4'>
@@ -31,25 +32,61 @@ const InputField = ({ label, type, value, onChange, placeholder, className }) =>
           required
         />
       )}
+      {error && <p className='text-red-500 text-xs mt-1'>{error}</p>}
     </div>
   );
 };
+
 
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [nameError, setNameError] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [messageError, setMessageError] = useState('');
+  const [submitted, setSubmitted] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Message:', message);
-    // Reset form fields
-    setName('');
-    setEmail('');
-    setMessage('');
+
+    setNameError('');
+    setEmailError('');
+    setMessageError('');
+
+    // Perform form validation
+    let isValid = true;
+
+    if (validator.isEmpty(name)) {
+      setNameError('Name is required');
+      isValid = false;
+    }
+
+    if (validator.isEmpty(email)) {
+      setEmailError('Email is required');
+      isValid = false;
+    } else if (!validator.isEmail(email)) {
+      setEmailError('Please provide a valid email');
+      isValid = false;
+    }
+
+    if (validator.isEmpty(message)) {
+      setMessageError('Message is required');
+      isValid = false;
+    }
+
+    if (isValid) {
+      // Handle form submission logic here
+      console.log('Name:', name);
+      console.log('Email:', email);
+      console.log('Message:', message);
+      // Reset form fields
+      setName('');
+      setEmail('');
+      setMessage('');
+
+      setSubmitted(true);
+    }
   };
 
   return (
@@ -70,7 +107,7 @@ const Contact = () => {
         </ul>
       </div>
 
-      <form onSubmit={handleSubmit} className='mt-8'>
+      <form onSubmit={handleSubmit} className='mt-8' noValidate>
         <h2 className="font-ibarra-real-nova tracking-tighter leading-42px text-h2 font-bold mb-6">Contact Me</h2>
 
         <InputField
@@ -79,6 +116,7 @@ const Contact = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder='Your name'
+          error={nameError}
         />
 
         <InputField
@@ -87,6 +125,7 @@ const Contact = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder='email@example.com'
+          error={emailError}
         />
 
         <InputField
@@ -96,12 +135,16 @@ const Contact = () => {
           onChange={(e) => setMessage(e.target.value)}
           placeholder='How can I help?'
           className='h-[72px]'
+          error={messageError}
         />
 
         <button type='submit' className='uppercase px-8 py-4 font-public-sans tracking-[2px] text-xs leading-none text-white bg-darkblue hover:bg-cyan'>
           Send message
         </button>
       </form>
+      {submitted && (<div className='text-sm font-public-sans text-darkblue mt-4'>
+        Thank you for your message! I will get back to you as soon as possible.
+      </div>)}
     </div>
   );
 };
