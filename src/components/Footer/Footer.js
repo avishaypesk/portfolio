@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import whiteLogo from '../../assets/images/logo-white.svg';
 import NavItem from '../NavItem/NavItem';
 import Button from '../Button/Button';
@@ -15,7 +15,9 @@ function Footer() {
       {!isContactPage && (
         <div className='flex flex-col items-center mb-20 px-8'>
           <h2 className='font-ibarra-real-nova font-bold text-grayishdarkblue text-h2 tracking-tighter leading-42px mb-10 text-center'>Interested in doing a project together?</h2>
+          <Link to='/contact'>
           <Button text='Contact me' />
+          </Link>
         </div>
       )}
 
