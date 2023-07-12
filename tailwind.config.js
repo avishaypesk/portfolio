@@ -12,7 +12,7 @@ module.exports = {
         darkerblue: '#1d3544',
         grayishdarkblue: '#33323D',
         verylightgrey: '#FAFAFA',
-        lightgrey: '#EAEAEB',
+        lightgrey: '#E5E3E4',
         brightred: '#F43030',
       },
       fontFamily: {
