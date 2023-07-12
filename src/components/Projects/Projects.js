@@ -13,6 +13,7 @@ const Projects = () => {
             title={project.title}
             text={project.text}
             imageSrc={project.imageSrc}
+            projectId={index}
           />
         ))}
       </div>

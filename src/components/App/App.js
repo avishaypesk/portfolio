@@ -6,6 +6,7 @@ import About from '../About/About';
 import Footer from '../Footer/Footer';
 import Projects from '../Projects/Projects';
 import Contact from '../Contact/Contact';
+import ProjectPage from '../ProjectPage/ProjectPage';
 
 const Home = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:id" element={<ProjectPage />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
