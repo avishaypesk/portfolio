@@ -48,7 +48,7 @@ function Nav() {
                 />
             </button>
             <div className="hidden md:flex text-grayishdarkblue">
-                <ul className="flex space-x-8 items-center">
+                <ul className="flex md:space-x-10 items-center">
                     <NavItem to="/" text="Home" />
                     <NavItem to="/projects" text="Portfolio" />
                     <NavItem to="/contact" text="Contact Me" />

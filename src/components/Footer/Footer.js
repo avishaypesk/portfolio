@@ -11,10 +11,11 @@ function Footer() {
   const isContactPage = location.pathname === '/contact';
 
   return (
-    <footer className='mt-20 '>
+    <footer className='mt-20 md:mt-24 '>
       {!isContactPage && (
-        <div className='flex flex-col items-center mb-20 px-8'>
-          <h2 className='font-ibarra-real-nova font-bold text-grayishdarkblue text-h2 tracking-tighter leading-42px mb-10 text-center'>Interested in doing a project together?</h2>
+        <div className='flex flex-col items-center mb-20 px-8 md:flex-row md: justify-between'>
+          <h2 className='font-ibarra-real-nova font-bold text-grayishdarkblue text-h2 tracking-tighter leading-42px mb-10 text-center md:w-[350px] md:mb-0'>Interested in doing a project together?</h2>
+          <div className="invisible w-28 h-px bg-grayishdarkblue bg-opacity-20 md:visible"></div>
           <Link to='/contact'>
           <Button text='Contact me' />
           </Link>

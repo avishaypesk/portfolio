@@ -47,17 +47,16 @@ const ProjectPage = () => {
                         <img key={index} src={preview} alt={`Preview ${index + 1}`} />
                     ))}
 
-                <div className='flex justify-between border-y border-lightgrey mt-16'>
-                    <Link to={`/projects/${getPreviousProjectId()}`}>
-                        <img src={leftArrow} alt="Previous" />
-                        <h4>{previousProject.title}</h4>
-                        <span>Previous Project</span>
+                <div className='flex justify-between border-y border-lightgrey mt-16 min-h-[132px]'>
+                    <Link to={`/projects/${getPreviousProjectId()}`} className='w-1/2 flex items-start justify-center flex-col border-r text-left'>
+                        <img src={leftArrow} alt="Previous" className='h-4 w-2 mt-6'/>
+                        <h4 className='text-grayishdarkblue font-ibarra-real-nova text-h3 leading-36px'>{previousProject.title}</h4>
+                        <span className='text-public-sans text-body1 leading-30px text-grayishdarkblue text-opacity-50'>Previous Project</span>
                     </Link>
-                    <div className='border border-lightgrey'></div>
-                    <Link to={`/projects/${getNextProjectId()}`}>
-                        <img src={rightArrow} alt="Next" />
-                        <h4>{nextProject.title}</h4>
-                        <span>Next Project</span>
+                    <Link to={`/projects/${getNextProjectId()}`} className='w-1/2 flex items-end justify-center flex-col text-right'>
+                        <img src={rightArrow} alt="Next" className='h-4 w-2 mt-6'/>
+                        <h4 className='text-grayishdarkblue font-ibarra-real-nova text-h3 leading-36px'>{nextProject.title}</h4>
+                        <span className='text-public-sans text-body1 leading-30px text-grayishdarkblue text-opacity-50'>Next Project</span>
                     </Link>
                 </div>
             </div>
