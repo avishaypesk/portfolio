@@ -17,9 +17,9 @@ function Hero() {
   };
 
   return (
-    <div className='mt-12'>
-      <img className="scale-x-[-1]" src={hero} alt='hero' />
-      <h1 className='font-ibarra-real-nova font-bold text-h2 text-grayishdarkblue tracking-tighter leading-42px pt-6 relative'>Hey, I’m <span className='name'>Avishay Peskin</span> and I love building beautiful websites</h1>
+    <div className='mt-12 relative'>
+      <img className="scale-x-[-1]" src={hero} alt='hero'/> 
+        <h1 className='font-ibarra-real-nova font-bold text-h2 text-grayishdarkblue tracking-tighter leading-42px'>Hey, I’m <span className='name'>Avishay Peskin</span> and I love building beautiful websites</h1>
 
       <ScrollLink to='about' smooth={true} duration={600}>
         <button

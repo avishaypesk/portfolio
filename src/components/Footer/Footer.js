@@ -23,9 +23,9 @@ function Footer() {
       )}
 
       <div className="bg-grayishdarkblue">
-        <div className='py-14 flex flex-col items-center'>
+        <div className='py-14 flex flex-col items-center md:flex-row md:py-6 md:justify-between md:px-10'>
           <img src={whiteLogo} alt='logo' />
-          <ul className='font-public-sans text-xs text-white uppercase text-center tracking-[2px] space-y-8 my-10'>
+          <ul className='font-public-sans text-xs text-white uppercase text-center tracking-[2px] space-y-8 my-10 md:flex md:space-y-0 md:space-x-[42px] md:my-0 md:mr-auto md:ml-12'>
             <NavItem to="/" text="Home" />
             <NavItem to="/projects" text="Portfolio" />
             <NavItem to="/contact" text="Contact Me" />
