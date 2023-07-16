@@ -34,15 +34,15 @@ function Hero() {
   return (
     <div className='mt-12 relative'>
       <div className='relative'>
-        <img className='scale-x-[-1] md:h-full' src={hero} alt='hero' />
+        <img className='scale-x-[-1] md:h-full xl:w-full' src={hero} alt='hero' />
         {!isLargeScreen && (
-          <div className='bg-white'>
+          <div>
             <h1 className='font-ibarra-real-nova font-bold text-h2 text-grayishdarkblue tracking-tighter leading-42px pt-6 md:pt-14 md:pr-14'>
               Hey, I’m <span className='name'>Avishay Peskin</span> and I love building beautiful websites
             </h1>
           </div>
         )}
-        <div className={isLargeScreen ? 'absolute bottom-0 left-0 w-3/4 bg-white' : 'mt-4'}>
+        <div className={isLargeScreen ? 'absolute bottom-0 left-0 w-3/4 xl:w-[445px] bg-white' : 'mt-4'}>
           {isLargeScreen && (
             <h1 className='font-ibarra-real-nova font-bold text-h2 text-grayishdarkblue tracking-tighter leading-42px md:pt-14 md:pr-14'>
               Hey, I’m <span className='name'>Avishay Peskin</span> and I love building beautiful websites

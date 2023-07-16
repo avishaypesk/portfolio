@@ -11,11 +11,11 @@ function Footer() {
   const isContactPage = location.pathname === '/contact';
 
   return (
-    <footer className='mt-20 md:mt-24 '>
+    <footer className='mt-20 md:mt-24 xl:mt-[150px]'>
       {!isContactPage && (
-        <div className='flex flex-col items-center mb-20 px-8 md:flex-row md: justify-between'>
+        <div className='flex flex-col items-center mb-20 px-8 md:flex-row md:justify-between xl:px-[165px]'>
           <h2 className='font-ibarra-real-nova font-bold text-grayishdarkblue text-h2 tracking-tighter leading-42px mb-10 text-center md:w-[350px] md:mb-0'>Interested in doing a project together?</h2>
-          <div className="invisible w-28 h-px bg-grayishdarkblue bg-opacity-20 md:visible"></div>
+          <div className="invisible w-28 h-px bg-grayishdarkblue bg-opacity-20 md:visible xl:w-[534px]"></div>
           <Link to='/contact'>
           <Button text='Contact me' />
           </Link>
@@ -23,7 +23,7 @@ function Footer() {
       )}
 
       <div className="bg-grayishdarkblue">
-        <div className='py-14 flex flex-col items-center md:flex-row md:py-6 md:justify-between md:px-10'>
+        <div className='py-14 flex flex-col items-center md:flex-row md:py-6 md:justify-between md:px-10 xl:px-[165px]'>
           <img src={whiteLogo} alt='logo' />
           <ul className='font-public-sans text-xs text-white uppercase text-center tracking-[2px] space-y-8 my-10 md:flex md:space-y-0 md:space-x-[42px] md:my-0 md:mr-auto md:ml-12'>
             <NavItem to="/" text="Home" />

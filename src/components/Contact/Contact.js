@@ -103,60 +103,63 @@ const Contact = () => {
   };
 
   return (
-    <div className='text-grayishdarkblue'>
-      <div className='border-y-[1px] border-grayishdarkblue border-opacity-20 pb-8'>
-        <h2 className='font-ibarra-real-nova tracking-tighter leading-42px text-h2 font-bold my-6'>Get in Touch</h2>
-        <p className='font-public-sans leading-30px text-body2'>
-          I’d love to hear about what you’re working on and how I could help. I’m currently looking for a new role and am open to a wide range of opportunities. My preference would be to find a position in a company in Tel Aviv. But I’m also happy to hear about opportunities that don’t fit that description. I’m a hard-working and positive person who will always approach each task with a sense of purpose and attention to detail. Please feel free to check out my online profiles below and get in touch using the form.
-        </p>
-        <ul className='flex space-x-4 mt-6'>
-          {socialMedia.map((item) => (
-            <li key={item.name}>
-              <a href={item.url}>
-                <img src={item.icon} alt={item.name} className='w-6 h-6' />
-              </a>
-            </li>
-          ))}
-        </ul>
+    <div className='text-grayishdarkblue max-w-[1100px]'>
+      <div className='border-y-[1px] border-grayishdarkblue border-opacity-20 pb-8 xl:flex xl:py-12 xl:justify-between'>
+        <h2 className='font-ibarra-real-nova tracking-tighter leading-42px text-h2 font-bold my-6 xl:my-0'>Get in Touch</h2>
+        <div>
+          <p className='font-public-sans leading-30px text-body2 xl:max-w-[635px]'>
+            I’d love to hear about what you’re working on and how I could help. I’m currently looking for a new role and am open to a wide range of opportunities. My preference would be to find a position in a company in Tel Aviv. But I’m also happy to hear about opportunities that don’t fit that description. I’m a hard-working and positive person who will always approach each task with a sense of purpose and attention to detail. Please feel free to check out my online profiles below and get in touch using the form.
+          </p>
+          <ul className='flex space-x-4 mt-6'>
+            {socialMedia.map((item) => (
+              <li key={item.name}>
+                <a href={item.url}>
+                  <img src={item.icon} alt={item.name} className='w-6 h-6' />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
-      <form onSubmit={handleFormSubmit} className='mt-8' noValidate>
+      <form onSubmit={handleFormSubmit} className='mt-8 xl:mt-12 xl:flex xl:justify-between ' noValidate>
         <h2 className='font-ibarra-real-nova tracking-tighter leading-42px text-h2 font-bold mb-6'>Contact Me</h2>
+        <div className='xl:w-[635px]'>
+          <InputField
+            label='Name'
+            type='text'
+            name='name'
+            placeholder='Your name'
+            value={name}
+            onChange={handleNameChange}
+            error={nameError}
+          />
 
-        <InputField
-          label='Name'
-          type='text'
-          name='name'
-          placeholder='Your name'
-          value={name}
-          onChange={handleNameChange}
-          error={nameError}
-        />
+          <InputField
+            label='Email'
+            type='email'
+            name='email'
+            placeholder='email@example.com'
+            value={email}
+            onChange={handleEmailChange}
+            error={emailError}
+          />
 
-        <InputField
-          label='Email'
-          type='email'
-          name='email'
-          placeholder='email@example.com'
-          value={email}
-          onChange={handleEmailChange}
-          error={emailError}
-        />
+          <InputField
+            label='Message'
+            type='textarea'
+            name='message'
+            placeholder='How can I help?'
+            value={message}
+            onChange={handleMessageChange}
+            className='h-[72px]'
+            error={messageError}
+          />
 
-        <InputField
-          label='Message'
-          type='textarea'
-          name='message'
-          placeholder='How can I help?'
-          value={message}
-          onChange={handleMessageChange}
-          className='h-[72px]'
-          error={messageError}
-        />
-
-        <button type='submit' className='uppercase px-8 py-4 font-public-sans tracking-[2px] text-xs leading-none text-white bg-darkblue hover:bg-cyan disabled:bg-gray-400' disabled={submitting}>
-          {submitting ? 'Submitting...' : 'Send message'}
-        </button>
+          <button type='submit' className='uppercase px-8 py-4 font-public-sans tracking-[2px] text-xs leading-none text-white bg-darkblue hover:bg-cyan disabled:bg-gray-400' disabled={submitting}>
+            {submitting ? 'Submitting...' : 'Send message'}
+          </button>
+        </div>
       </form>
 
       {succeeded && (
