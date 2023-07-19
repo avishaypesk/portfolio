@@ -7,6 +7,7 @@ import Footer from '../Footer/Footer';
 import Projects from '../Projects/Projects';
 import Contact from '../Contact/Contact';
 import ProjectPage from '../ProjectPage/ProjectPage';
+import './App.css'
 
 const Home = () => {
   return (
@@ -22,7 +23,7 @@ const App = () => {
     <Router>
       <div className='md:h-screen'>
         <Header />
-        <div className='px-8 pt-[104px] w-full md:pt-[144px] md:px-10 xl:px-[165px]'>
+        <div className='px-8 pt-[104px] w-auto md:pt-[144px] md:mx-10 xl:mx-[165px] bg-white'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />

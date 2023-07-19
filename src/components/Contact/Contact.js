@@ -103,7 +103,7 @@ const Contact = () => {
   };
 
   return (
-    <div className='text-grayishdarkblue max-w-[1100px]'>
+    <div className='text-grayishdarkblue max-w-[1100px] m-auto pb-4'>
       <div className='border-y-[1px] border-grayishdarkblue border-opacity-20 pb-8 xl:flex xl:py-12 xl:justify-between'>
         <h2 className='font-ibarra-real-nova tracking-tighter leading-42px text-h2 font-bold my-6 xl:my-0'>Get in Touch</h2>
         <div>
