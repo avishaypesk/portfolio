@@ -12,7 +12,7 @@ const Projects = () => {
             key={index}
             title={project.title}
             text={project.projectSummary}
-            imageSrc={project.imageSrc}
+            preview={project.preview}
             projectId={index}
             reverse={index % 2 !== 0}
           />

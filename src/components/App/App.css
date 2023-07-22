@@ -1,5 +1,6 @@
 body {
+    /* Background image from SVG Backgrounds (https://www.svgbackgrounds.com) */
     background-image: url('../../assets/images/footer-bg.svg');
     background-size: auto;
-    background-position: 2rem 1rem; /* Move 20 pixels to the right, and 0 pixels from top */
-  }
+    background-position: 2rem 1rem;
+}

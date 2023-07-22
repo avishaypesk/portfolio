@@ -23,7 +23,7 @@ const App = () => {
     <Router>
       <div className='md:h-screen'>
         <Header />
-        <div className='px-8 pt-[104px] w-auto md:pt-[144px] md:mx-10 xl:mx-[165px] bg-white'>
+        <div className='px-8 pt-[104px] w-auto md:pt-[144px] md:mx-10 xl:mx-[125px] bg-white'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
