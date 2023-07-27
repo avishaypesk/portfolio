@@ -43,22 +43,22 @@ const ProjectPage = () => {
 
     return (
         <div >
-            <img src={project.imageSrc} alt={project.title} />
+            <img src={project.imageSrc} alt={project.title} className='xl:mb-[115px]'/>
 
-            <div className='xl:flex'>
-                <div className='border-y border-grayishdarkblue border-opacity-20 mt-10 mb-12 md:flex md:mb-10 md:space-x-3 xl:flex-row xl:space-x-0 xl:h-fit'>
-                    <div className='md:w-1/2 md:space-y-4 xl:w-[350px]'>
+            <div className='xl:flex xl:justify-between xl:max-w-[1400px] xl:mx-auto'>
+                <div className='border-y border-grayishdarkblue border-opacity-20 mt-10 mb-12 md:flex md:mb-10 md:space-x-3 xl:flex-row xl:space-x-0 xl:h-fit xl:mt-0'>
+                    <div className='md:w-1/2 md:space-y-4 xl:max-w-[400px] xl:w-fit'>
                         <h1 className='text-grayishdarkblue font-ibarra-real-nova text-h2 font-bold leading-42px tracking-tighter mt-6 md:mt-8'>{project.title}</h1>
                         {!isMediumScreen ? (<p className='my-6 text-grayishdarkblue font-public-sans leading-30px text-body2'>{project.projectSummary}</p>) : ''}
                         <p className='text-cyan font-public-sans text-body2 font-bold leading-30px'>{project.technologies}</p>
-                        <Link to={project.projectSite}>
+                        <Link to={project.projectSite} target='_blank'>
                             <Button text='visit website' className='my-6 md:mt-4 md:mb-8' />
                         </Link>
                     </div>
                     {isMediumScreen ? (<p className='mt-8 text-grayishdarkblue font-public-sans leading-30px text-body2 w-1/2 h-fit'>{project.projectSummary}</p>) : ''}
                 </div>
 
-                <div className='xl:w-fit xl:ml-[125px]'>
+                <div className='xl:w-fit xl:max-w-[650px] xl:ml-[80px]'>
                     <h2 className='text-grayishdarkblue font-ibarra-real-nova text-h3 leading-42px tracking-tighter'>Project Background</h2>
                     <p className='mt-6 md:mt-8 mb-10 text-grayishdarkblue font-public-sans leading-30px text-body2 '>{project.projectBackground}</p>
                     <h3 className='text-grayishdarkblue font-ibarra-real-nova text-h3 leading-42px tracking-tighter mb-10'>Static Previews</h3>
@@ -66,13 +66,13 @@ const ProjectPage = () => {
                     <div className='space-y-8'>
                         {project.staticPreviews &&
                             project.staticPreviews.map((preview, index) => (
-                                <img key={index} src={preview} alt={`Preview ${index + 1}`} className='h-[400px]' />
+                                <img key={index} src={preview} alt={`Preview ${index + 1}`} className='w-full h-auto' />
                             ))}
                     </div>
                     </div>
                     </div>
 
-                    <div className='flex justify-between border-y border-lightgrey mt-16 min-h-[132px]'>
+                    <div className='flex justify-between border-y border-lightgrey mt-16 min-h-[132px] w-full'>
                         <Link to={`/projects/${getPreviousProjectId()}`} className='w-1/2 flex items-start justify-center flex-col border-r text-left md:flex-row md:items-center md:justify-start'>
                             <img src={leftArrow} alt="Previous" className='h-4 w-2 mt-6 md:mt-0 md:mr-8' />
                             <div>
