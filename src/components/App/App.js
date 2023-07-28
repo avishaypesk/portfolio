@@ -20,7 +20,7 @@ const Home = () => {
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/portfolio"> 
       <div className='md:h-screen'>
         <Header />
         <div className='px-8 pt-[104px] w-auto md:pt-[144px] md:mx-10 xl:mx-[125px] bg-white'>
