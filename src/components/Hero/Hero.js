@@ -34,7 +34,7 @@ function Hero() {
   return (
     <div className='mt-12 relative'>
       <div className='relative'>
-        <img className='scale-x-[-1] md:h-full xl:w-full rounded-2xl xl:bg-white' src={hero} alt='hero' />
+        <img className='scale-x-[-1] md:h-full xl:w-full xl:max-h-[46rem] m-auto rounded-2xl xl:bg-white' src={hero} alt='hero' />
         {!isLargeScreen && (
           <div>
             <h1 className='font-ibarra-real-nova font-bold text-h2 text-grayishdarkblue tracking-tighter leading-42px pt-6 md:pt-14 md:pr-14'>
