@@ -7,8 +7,8 @@ const Project = ({ title, text, preview, projectId, reverse }) => {
 
 
   return (
-    <div className={`flex flex-col items-center text-grayishdarkblue ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
-      <img src={preview} alt={title} className={`mb-8 md:mb-0 md:w-1/2 ${reverse ? 'md:ml-[69px]' : 'md:mr-[69px]'}`} />
+    <div className={`flex flex-col items-center text-grayishdarkblue md:justify-around ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+      <img src={preview} alt={title} className={`mb-8 md:mb-0 md:w-1/2 xl:w-1/3 ${reverse ? 'md:ml-[69px]' : 'md:mr-[69px]'}`} />
       <div className="border-y-[1px] border-grayishdarkblue border-opacity-20 md:w-1/2">
         <h2 className="font-ibarra-real-nova tracking-tighter leading-42px text-h2 font-bold my-6">{title}</h2>
         <p className='font-public-sans leading-30px text-body2'>{text}</p>

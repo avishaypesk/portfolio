@@ -66,7 +66,7 @@ const ProjectPage = () => {
                     <div className='space-y-8'>
                         {project.staticPreviews &&
                             project.staticPreviews.map((preview, index) => (
-                                <img key={index} src={preview} alt={`Preview ${index + 1}`} className='w-full h-auto' />
+                                <img key={index} src={preview} alt={`Preview ${index + 1}`} className='m-auto w-auto h-auto max-h-[550px]' />
                             ))}
                     </div>
                     </div>
