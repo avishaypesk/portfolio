@@ -32,7 +32,7 @@ function Hero() {
   }, []);
 
   return (
-    <div className='mt-12 relative cursor-pointer'>
+    <div className='mt-12 relative cursor-default'>
       <div className='relative'>
         <img className='scale-x-[-1] md:h-full xl:w-full xl:max-h-[46rem] xl:m-auto rounded-2xl xl:bg-white' src={hero} alt='hero' />
         {!isLargeScreen && (
